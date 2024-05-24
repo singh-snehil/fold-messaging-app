@@ -88,8 +88,8 @@ app.get('/users', async (req, res) => {
     }
 });
 
-app.get('/conversations', async (req, res) => {
-    const userId = req.query.userId; // Assuming user ID is sent as a query parameter
+app.get('/api/conversations', async (req, res) => {
+    const userId = req.query.userId;
 
     try {
         const conversations = await Conversation.find({ participants: userId })
